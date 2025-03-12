@@ -42,7 +42,7 @@ function App() {
   // Delete recipe
   const deleteRecipe = async (id) => {
     try {
-      await axios.delete(`${API_URL}/recipes/recipes/${id}`);
+      await axios.delete(`${API_URL}/recipes/${id}`);
       fetchRecipes(); // Refresh the list
     } catch (error) {
       console.error('Error deleting recipe:', error);
